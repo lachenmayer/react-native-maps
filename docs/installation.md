@@ -6,17 +6,24 @@ First, download the library from npm:
 npm install react-native-maps --save
 ```
 
+## 1. Get a Google Maps API key
 
-## Get a Google Maps API key
+To use Google Maps, you will need an API key. Otherwise, Google Maps will not render anything, and maps will not work at all on Android.
 
-Go to https://developers.google.com/maps/documentation/ios-sdk/get-api-key and https://developers.google.com/maps/documentation/android-api/signup to get your keys for both iOS and Android.
+1. Create a new project for your app in the Google Developer console: https://console.cloud.google.com/projectcreate
+    - *(if you already have an existing Google Cloud project for your app you can skip this step.)*
+2. Enable the iOS and/or Android SDKs, as required:
+    - iOS: https://console.cloud.google.com/apis/library/maps-ios-backend.googleapis.com/
+    - Android: https://console.cloud.google.com/apis/library/maps-android-backend.googleapis.com/
+    - *⚠️ Make sure the project you just created is selected in the top nav bar on Google Cloud Platform.*
+3. Create an API key: https://console.cloud.google.com/apis/credentials
+    - You can choose to use the same API key for both iOS and Android, or you can choose to restrict the key and use different keys for each platform. This is up to you.
 
-Make sure that Google Maps Android API and Google Maps SDK for iOS are enabled for the current project.
-https://console.developers.google.com/apis/library/maps-android-backend.googleapis.com/
-https://console.developers.google.com/apis/library/maps-ios-backend.googleapis.com
+Keep this key ready - you will need to use it further along in the installation process.
 
-Without an API key the Google Maps map won't render anything.
+**⚠️ Make sure not to upload your API keys to public GitHub repos, especially if you have billing enabled on your account.**
 
+## 2. Install native dependencies
 
 ## iOS - CocoaPods
 
